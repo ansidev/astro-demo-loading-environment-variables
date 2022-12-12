@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const region = import.meta.env.VITE_REGION;
+---
+
+<Layout title="Astro Demo - Loading Environment Variables">
+  <main>
+    <h1>Homepage</h1>
+    <h2>Astro Demo - Loading Environment Variables</h2>
+    <p class="instructions">
+      Region: {region}
+    </p>
+    <p>
+      © 2022-present by <a href="mailto:ansidev@gmail.com">ansidev</a>. <a href="https://github.com/ansidev/astro-demo-loading-environment-variables">Source code</a>
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+</style>
